@@ -59,12 +59,17 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("GRID PROPERTIES")] 
     [SerializeField] private float queryLenght;
-    
+    [SerializeField] private Queries targetQuery, bigEvadeQuery;
+
+    private Vector3 lowEnd, highEnd;
     private void Awake()
     {
         //IA2-P3
-        
+
         #region  CONFIGURATION
+        
+        lowEnd = new Vector3(-queryLenght, 0, -queryLenght);
+        highEnd = new Vector3(queryLenght, 0, queryLenght);
         
         maxEnergy = energy;
         _rb = GetComponent<Rigidbody>();
@@ -138,7 +143,6 @@ public class EnemyPatrol : MonoBehaviour
             _renderer.material = patrolMat;
             
             currentWaypoint = GetClosestPatrolPoint(transform, allWaypoints);
-            Debug.Log("PATROL!");
         };
 
         patrol.OnUpdate += () =>
@@ -146,22 +150,29 @@ public class EnemyPatrol : MonoBehaviour
             //IA2-P1
             acceptableBoids = BoidManager.instance.allBoids.Aggregate(FList.Create<GridEntity>(), (flist, boid) =>
             {
-                flist = !boid.amDead && boid.CheckDistance(transform.position) <= patrolRange
+                Tuple<int, int> pos = myGrid.GetPositionInGrid(boid.transform.position);
+                flist = !boid.amDead && boid.CheckDistance(transform.position) <= patrolRange && myGrid.IsInsideGrid(pos)
                     ? flist + boid
                     : flist;
                 return flist;
             }).OrderBy(b => b.CheckDistance(transform.position)).ToList();
 
-            foreach (var boid in acceptableBoids)
-            {
-                if (GetDistance(transform.position, boid.transform.position) <= minChaseDistance &&
-                    IsInSight(transform.position, boid.transform.position))
-                {
-                    SendInputToFSM(EnemyStates.CHASE);
-                    return;
-                }
-            }
+            //IA2-P2 - Recuperatorio
+            var nearestTarget = targetQuery.Query();
             
+            if (nearestTarget.Any())
+            {
+                foreach (var boid in acceptableBoids)
+                {
+                    if (GetDistance(transform.position, boid.transform.position) <= minChaseDistance &&
+                        IsInSight(transform.position, boid.transform.position))
+                    {
+                        SendInputToFSM(EnemyStates.CHASE);
+                        return;
+                    }
+                } 
+            }
+
             Vector3 direction = allWaypoints[currentWaypoint].transform.position - transform.position;
             transform.forward = direction;
 
@@ -193,28 +204,60 @@ public class EnemyPatrol : MonoBehaviour
 
         chase.OnEnter += x =>
         {
-            _renderer.material = chaseMat; 
-            
-            Debug.Log("CHASE!");
-            
+            _renderer.material = chaseMat;
+
             //IA2-P1
-            //IA2-P2
+            //IA2-P2 - parte Recuperatorio
+
+            var queryResult = myGrid.Query(transform.position + (lowEnd * 2),
+                    transform.position + (highEnd * 2),
+                    x => true)
+                .Where(b => !b.amDead)
+                .OrderBy(b => GetDistance(transform.position, b.transform.position))
+                .FirstOrDefault();
             
-            GridEntity nearestTarget = myGrid.GetHashValues().SelectMany(boid => boid).Where(boid => !boid.amDead)
-                .OrderBy(boid => GetDistance(boid.transform.position, transform.position)).FirstOrDefault();
+            //Esta es otra version que cambio el Query por una variable de clase Queries instanciada por inspector que 
+            //tiene los parametros definidos por editor.
+            //(funciona, por si la quiere probar)
+            
+            /*var queryResult = targetQuery.Query()
+                .Where(b => !b.amDead)
+                .OrderBy(b => GetDistance(transform.position, b.transform.position))
+                .FirstOrDefault();*/
 
-            targets = myGrid.GetHashValues().SkipWhile(boidSet => !boidSet.Contains(nearestTarget)).First()
-                .Select(boid => boid).Where(boid => !boid.amDead).ToList();
-
-            if (targets.Count <= 0)
+            if (queryResult == null)
             {
                 SendInputToFSM(EnemyStates.PATROL);
                 return;
             }
+            
+            //IA2-P2 - parte Recuperatorio
+            var nearestTarget = myGrid.GetPositionInGrid(queryResult.transform.position);
+
+            if(myGrid.IsInsideGrid(nearestTarget))
+                targets = myGrid.GetBucket(nearestTarget).Select(boid => boid).Where(boid => !boid.amDead).ToList();
+            else
+            {
+                SendInputToFSM(EnemyStates.PATROL);
+                return;
+            }
+            
 
             foreach (var boid in targets)
             {
                 boid.SetTarget();
+            }
+            
+            /*IEnumerable<GridEntity> nonTargets = myGrid.Query(transform.position + lowEnd,
+                transform.position + highEnd + new Vector3(queryLenght, 0, queryLenght),
+                x => true);*/
+
+            IEnumerable<GridEntity> nonTargets = bigEvadeQuery.Query().Where(b => !b.amDead && !targets.Contains(b));
+
+            foreach (var boid in nonTargets)
+            {
+                //Aleja a los otros boids 25 unidades
+                boid.BigEvade(25f);
             }
         };
 
@@ -224,18 +267,19 @@ public class EnemyPatrol : MonoBehaviour
 
             if (targets.Count <= 0)
             {
-                Debug.Log("ME VOY DE CHASE 0");
                 SendInputToFSM(EnemyStates.PATROL);
+                return;
             }
             
             //IA2-P1
-            currentTarget = targets.OrderBy(boid => GetDistance(boid.transform.position, transform.position))
+            currentTarget = targets.Select(b => b).Where(b => !b.amDead)
+                .OrderBy(boid => GetDistance(boid.transform.position, transform.position))
                 .FirstOrDefault();
 
-            if (GetDistance(currentTarget.transform.position, transform.position) >= minChaseDistance + 7f)
+            if (currentTarget == null || GetDistance(currentTarget.transform.position, transform.position) >= minChaseDistance + 7f)
             {
-                Debug.Log("ME VOY DE CHASE 1");
                 SendInputToFSM(EnemyStates.PATROL);
+                return;
             }
 
             Vector3 direction = currentTarget.transform.position - transform.position;
@@ -245,7 +289,6 @@ public class EnemyPatrol : MonoBehaviour
 
             if (GetDistance(transform.position, currentTarget.transform.position) <= minAttackDistance && !currentTarget.amDead)
             {
-                Debug.Log("ME VOY DE CHASE 2");
                 SendInputToFSM(EnemyStates.ATTACK);
                 return;
             }
@@ -254,7 +297,6 @@ public class EnemyPatrol : MonoBehaviour
             
             if (energy < 0)
             {
-                Debug.Log("ME VOY DE CHASE 3");
                 SendInputToFSM(EnemyStates.REST);
             }
         };
@@ -263,8 +305,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             foreach (var boid in BoidManager.instance.allBoids)
             {
-                if (!boid.amDead)
-                    boid.SetNormal();
+                boid.SetNormal();
             }
         };
 
@@ -275,7 +316,6 @@ public class EnemyPatrol : MonoBehaviour
         attack.OnEnter += x =>
         {
             _renderer.material = attackMat;
-            Debug.Log("TIRITO");
             currentTarget.SetDead();
             currentTarget = null;
 
@@ -286,7 +326,7 @@ public class EnemyPatrol : MonoBehaviour
 
         #region REST SETUP
 
-        rest.OnEnter += x => { Debug.Log("REST!"); _renderer.material = restMat; };
+        rest.OnEnter += x => { _renderer.material = restMat; };
         
         rest.OnUpdate += () =>
         {

@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 22076296}
   - component: {fileID: 22076295}
   - component: {fileID: 22076294}
+  - component: {fileID: 22076298}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -367,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22076292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36, y: 0.3, z: -38.6}
+  m_LocalPosition: {x: 36, y: 3, z: -38.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -399,9 +400,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -467,6 +468,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22076292}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &22076298
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22076292}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &25983330
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +890,7 @@ GameObject:
   - component: {fileID: 59211085}
   - component: {fileID: 59211084}
   - component: {fileID: 59211083}
+  - component: {fileID: 59211087}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -888,7 +906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59211081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.3, y: 0.29999995, z: -66.80673}
+  m_LocalPosition: {x: -28.3, y: 3, z: -66.80673}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -920,9 +938,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -988,6 +1006,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59211081}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &59211087
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59211081}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &70627447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1035,7 @@ GameObject:
   - component: {fileID: 70627451}
   - component: {fileID: 70627450}
   - component: {fileID: 70627449}
+  - component: {fileID: 70627453}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1016,7 +1051,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70627447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.5, y: 0.29999995, z: -79.899994}
+  m_LocalPosition: {x: -29.5, y: 3, z: -79.899994}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1048,9 +1083,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -1116,6 +1151,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70627447}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &70627453
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70627447}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &92409624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1370,7 @@ GameObject:
   - component: {fileID: 107073743}
   - component: {fileID: 107073742}
   - component: {fileID: 107073741}
+  - component: {fileID: 107073745}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1334,7 +1386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107073739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.800003, y: 0.29999995, z: -59.093258}
+  m_LocalPosition: {x: -37.800003, y: 3, z: -59.093258}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1366,9 +1418,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -1434,6 +1486,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107073739}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &107073745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107073739}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &112682205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1515,7 @@ GameObject:
   - component: {fileID: 112682209}
   - component: {fileID: 112682208}
   - component: {fileID: 112682207}
+  - component: {fileID: 112682211}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1462,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112682205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.799995, y: 0.29999995, z: -8.993263}
+  m_LocalPosition: {x: -73.799995, y: 3, z: -8.993263}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1494,9 +1563,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -1562,6 +1631,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112682205}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &112682211
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112682205}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &113408612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1660,7 @@ GameObject:
   - component: {fileID: 113408616}
   - component: {fileID: 113408615}
   - component: {fileID: 113408614}
+  - component: {fileID: 113408618}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1590,7 +1676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113408612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.670753, y: 0.29999995, z: -17.746574}
+  m_LocalPosition: {x: -45.670753, y: 3, z: -17.746574}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1622,9 +1708,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -1690,6 +1776,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113408612}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &113408618
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113408612}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &123616870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1913,7 @@ GameObject:
   - component: {fileID: 132274231}
   - component: {fileID: 132274230}
   - component: {fileID: 132274229}
+  - component: {fileID: 132274233}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1826,7 +1929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132274227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.3, y: 0.29999995, z: -60.099995}
+  m_LocalPosition: {x: -65.3, y: 3, z: -60.099995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1858,9 +1961,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -1926,6 +2029,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132274227}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &132274233
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132274227}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &135123649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +2058,7 @@ GameObject:
   - component: {fileID: 135123653}
   - component: {fileID: 135123652}
   - component: {fileID: 135123651}
+  - component: {fileID: 135123655}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -1954,7 +2074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135123649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.399994, y: 0.29999995, z: -75.799995}
+  m_LocalPosition: {x: 53.399994, y: 3, z: -75.799995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -1986,9 +2106,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -2054,6 +2174,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135123649}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &135123655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135123649}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &138289879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2406,7 @@ GameObject:
   - component: {fileID: 148962270}
   - component: {fileID: 148962269}
   - component: {fileID: 148962268}
+  - component: {fileID: 148962272}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -2285,7 +2422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148962266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2379684, y: 0.29999995, z: -44.598232}
+  m_LocalPosition: {x: 2.2379684, y: 3, z: -44.598232}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -2317,9 +2454,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -2385,6 +2522,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148962266}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &148962272
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148962266}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &165018488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,6 +2659,7 @@ GameObject:
   - component: {fileID: 166738313}
   - component: {fileID: 166738312}
   - component: {fileID: 166738311}
+  - component: {fileID: 166738315}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -2521,7 +2675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166738309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.77075, y: 0.29999995, z: -53.539833}
+  m_LocalPosition: {x: -76.77075, y: 3, z: -53.539833}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -2553,9 +2707,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -2621,6 +2775,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166738309}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &166738315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166738309}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &172772318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2804,7 @@ GameObject:
   - component: {fileID: 172772322}
   - component: {fileID: 172772321}
   - component: {fileID: 172772320}
+  - component: {fileID: 172772324}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -2649,7 +2820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172772318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.28085, y: 0.29999995, z: -40.32417}
+  m_LocalPosition: {x: 70.28085, y: 3, z: -40.32417}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -2681,9 +2852,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -2749,6 +2920,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172772318}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &172772324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172772318}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &174313069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,7 +3231,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 8.5255, y: 8.5255, z: 8.5255}
-  m_Children: []
+  m_Children:
+  - {fileID: 1885525497}
+  - {fileID: 1181736170}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3138,16 +3327,18 @@ MonoBehaviour:
   - {fileID: 1811359219}
   currentWaypoint: 0
   patrolSpeed: 22
-  minPatrolDistance: 30
+  minPatrolDistance: 10
   energyPatrolMultiplier: 1
   patrolRange: 200
-  minChaseDistance: 40
+  minChaseDistance: 17
   energyChaseMultiplier: 2
   chaseSpeed: 30
   minAttackDistance: 5
   attackDuration: 2
   regenMultiplier: 2.5
-  queryLenght: 15
+  queryLenght: 20
+  targetQuery: {fileID: 1885525498}
+  bigEvadeQuery: {fileID: 1181736171}
 --- !u!1 &214070621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,6 +3460,7 @@ GameObject:
   - component: {fileID: 214823285}
   - component: {fileID: 214823284}
   - component: {fileID: 214823283}
+  - component: {fileID: 214823287}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -3284,7 +3476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214823281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.799995, y: 0.29999995, z: -2.300003}
+  m_LocalPosition: {x: -39.799995, y: 3, z: -2.300003}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -3316,9 +3508,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -3384,6 +3576,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214823281}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &214823287
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214823281}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &214915201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,6 +3605,7 @@ GameObject:
   - component: {fileID: 214915205}
   - component: {fileID: 214915204}
   - component: {fileID: 214915203}
+  - component: {fileID: 214915207}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -3412,7 +3621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214915201}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.100006, y: 0.29999995, z: 38.40001}
+  m_LocalPosition: {x: 42.100006, y: 3, z: 38.40001}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -3444,9 +3653,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -3512,6 +3721,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214915201}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &214915207
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214915201}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &237315863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,6 +3845,7 @@ GameObject:
   - component: {fileID: 248075438}
   - component: {fileID: 248075437}
   - component: {fileID: 248075436}
+  - component: {fileID: 248075440}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -3635,7 +3861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248075434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.75888, y: 0.29999995, z: 19.464302}
+  m_LocalPosition: {x: 46.75888, y: 3, z: 19.464302}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -3667,9 +3893,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -3735,6 +3961,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248075434}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &248075440
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248075434}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &262482881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +4098,7 @@ GameObject:
   - component: {fileID: 262610143}
   - component: {fileID: 262610142}
   - component: {fileID: 262610141}
+  - component: {fileID: 262610145}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -3871,7 +4114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262610139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.800003, y: 0.29999995, z: -20.999992}
+  m_LocalPosition: {x: 26.800003, y: 3, z: -20.999992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -3903,9 +4146,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -3971,6 +4214,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262610139}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &262610145
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262610139}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &275359702
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,6 +4338,7 @@ GameObject:
   - component: {fileID: 300299577}
   - component: {fileID: 300299576}
   - component: {fileID: 300299575}
+  - component: {fileID: 300299579}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -4094,7 +4354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300299573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.997673, y: 0.29999995, z: 76.53032}
+  m_LocalPosition: {x: -61.997673, y: 3, z: 76.53032}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -4126,9 +4386,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -4194,6 +4454,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300299573}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &300299579
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300299573}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &314322049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,6 +4483,7 @@ GameObject:
   - component: {fileID: 314322053}
   - component: {fileID: 314322052}
   - component: {fileID: 314322051}
+  - component: {fileID: 314322055}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -4222,7 +4499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314322049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.1, y: 0.29999995, z: 69.905396}
+  m_LocalPosition: {x: -32.1, y: 3, z: 69.905396}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -4254,9 +4531,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -4322,6 +4599,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314322049}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &314322055
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314322049}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &315183496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,6 +4831,7 @@ GameObject:
   - component: {fileID: 324454336}
   - component: {fileID: 324454335}
   - component: {fileID: 324454334}
+  - component: {fileID: 324454338}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -4553,7 +4847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324454332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.899994, y: 0.29999995, z: -51.799995}
+  m_LocalPosition: {x: 65.899994, y: 3, z: -51.799995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -4585,9 +4879,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -4653,6 +4947,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324454332}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &324454338
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324454332}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &334443212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,6 +5071,7 @@ GameObject:
   - component: {fileID: 341354672}
   - component: {fileID: 341354671}
   - component: {fileID: 341354670}
+  - component: {fileID: 341354674}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -4776,7 +5087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341354668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.283375, y: 0.29999995, z: 92.53012}
+  m_LocalPosition: {x: -27.283375, y: 3, z: 92.53012}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -4808,9 +5119,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -4876,6 +5187,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341354668}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &341354674
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341354668}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &348053795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,6 +6433,7 @@ GameObject:
   - component: {fileID: 451726053}
   - component: {fileID: 451726052}
   - component: {fileID: 451726051}
+  - component: {fileID: 451726055}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -6121,7 +6449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451726049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.61173, y: 0.29999995, z: 58.72171}
+  m_LocalPosition: {x: -78.61173, y: 3, z: 58.72171}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -6153,9 +6481,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -6221,6 +6549,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451726049}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &451726055
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451726049}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &462059444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +6578,7 @@ GameObject:
   - component: {fileID: 462059448}
   - component: {fileID: 462059447}
   - component: {fileID: 462059446}
+  - component: {fileID: 462059450}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -6249,7 +6594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462059444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.8, y: 0.29999995, z: -60.199993}
+  m_LocalPosition: {x: 75.8, y: 3, z: -60.199993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -6281,9 +6626,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -6349,6 +6694,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462059444}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &462059450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462059444}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &463925953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6362,6 +6723,7 @@ GameObject:
   - component: {fileID: 463925957}
   - component: {fileID: 463925956}
   - component: {fileID: 463925955}
+  - component: {fileID: 463925959}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -6377,7 +6739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463925953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.038773, y: 0.29999995, z: 81}
+  m_LocalPosition: {x: -20.038773, y: 3, z: 81}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -6409,9 +6771,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -6477,6 +6839,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463925953}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &463925959
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463925953}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &479306417
 GameObject:
   m_ObjectHideFlags: 0
@@ -6801,6 +7179,7 @@ GameObject:
   - component: {fileID: 484954581}
   - component: {fileID: 484954580}
   - component: {fileID: 484954579}
+  - component: {fileID: 484954583}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -6816,7 +7195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484954577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.800003, y: 0.29999995, z: -71.10673}
+  m_LocalPosition: {x: -16.800003, y: 3, z: -71.10673}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -6848,9 +7227,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -6916,6 +7295,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484954577}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &484954583
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484954577}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &496872203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7037,6 +7432,7 @@ GameObject:
   - component: {fileID: 499283215}
   - component: {fileID: 499283214}
   - component: {fileID: 499283213}
+  - component: {fileID: 499283217}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -7052,7 +7448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499283211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79.67075, y: 0.29999995, z: -24.439835}
+  m_LocalPosition: {x: -79.67075, y: 3, z: -24.439835}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -7084,9 +7480,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -7152,6 +7548,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499283211}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &499283217
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499283211}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &501354455
 GameObject:
   m_ObjectHideFlags: 0
@@ -7260,6 +7672,7 @@ GameObject:
   - component: {fileID: 503021103}
   - component: {fileID: 503021102}
   - component: {fileID: 503021101}
+  - component: {fileID: 503021105}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -7275,7 +7688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503021099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.507416, y: 0.29999995, z: -39.082016}
+  m_LocalPosition: {x: 90.507416, y: 3, z: -39.082016}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -7307,9 +7720,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -7375,6 +7788,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503021099}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &503021105
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503021099}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &525371547
 GameObject:
   m_ObjectHideFlags: 0
@@ -7388,6 +7817,7 @@ GameObject:
   - component: {fileID: 525371551}
   - component: {fileID: 525371550}
   - component: {fileID: 525371549}
+  - component: {fileID: 525371553}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -7403,7 +7833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525371547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.5, y: 0.29999995, z: -30.299995}
+  m_LocalPosition: {x: 58.5, y: 3, z: -30.299995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -7435,9 +7865,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -7503,6 +7933,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525371547}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &525371553
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525371547}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &532038045
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,6 +8178,7 @@ GameObject:
   - component: {fileID: 544107611}
   - component: {fileID: 544107610}
   - component: {fileID: 544107609}
+  - component: {fileID: 544107613}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -7747,7 +8194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544107607}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.4, y: 0.29999995, z: -20.799995}
+  m_LocalPosition: {x: -72.4, y: 3, z: -20.799995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -7779,9 +8226,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -7847,6 +8294,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544107607}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &544107613
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544107607}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &561528442
 GameObject:
   m_ObjectHideFlags: 0
@@ -7955,6 +8418,7 @@ GameObject:
   - component: {fileID: 588913473}
   - component: {fileID: 588913472}
   - component: {fileID: 588913471}
+  - component: {fileID: 588913475}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -7970,7 +8434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588913469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -71.6, y: 0.29999995, z: 79.7054}
+  m_LocalPosition: {x: -71.6, y: 3, z: 79.7054}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -8002,9 +8466,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -8070,6 +8534,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588913469}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &588913475
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588913469}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &597094761
 GameObject:
   m_ObjectHideFlags: 0
@@ -8368,6 +8848,7 @@ GameObject:
   - component: {fileID: 628558978}
   - component: {fileID: 628558977}
   - component: {fileID: 628558976}
+  - component: {fileID: 628558980}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -8383,7 +8864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628558974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.90741, y: 0.29999995, z: -28.282017}
+  m_LocalPosition: {x: 37.90741, y: 3, z: -28.282017}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -8415,9 +8896,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -8483,6 +8964,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628558974}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &628558980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628558974}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &637029412
 GameObject:
   m_ObjectHideFlags: 0
@@ -8496,6 +8993,7 @@ GameObject:
   - component: {fileID: 637029416}
   - component: {fileID: 637029415}
   - component: {fileID: 637029414}
+  - component: {fileID: 637029418}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -8511,7 +9009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637029412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.800003, y: 0.29999995, z: -64.399994}
+  m_LocalPosition: {x: -53.800003, y: 3, z: -64.399994}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -8543,9 +9041,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -8611,6 +9109,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637029412}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &637029418
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637029412}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &643701334
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,6 +9246,7 @@ GameObject:
   - component: {fileID: 651080527}
   - component: {fileID: 651080526}
   - component: {fileID: 651080525}
+  - component: {fileID: 651080529}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -8747,7 +9262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651080523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.797668, y: 0.29999995, z: 65.83569}
+  m_LocalPosition: {x: -13.797668, y: 3, z: 65.83569}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -8779,9 +9294,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -8847,6 +9362,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651080523}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &651080529
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651080523}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &667413936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8860,6 +9391,7 @@ GameObject:
   - component: {fileID: 667413940}
   - component: {fileID: 667413939}
   - component: {fileID: 667413938}
+  - component: {fileID: 667413942}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -8875,7 +9407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667413936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.759995, y: 0.29999995, z: -54.999992}
+  m_LocalPosition: {x: 44.759995, y: 3, z: -54.999992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -8907,9 +9439,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -8975,6 +9507,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667413936}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &667413942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667413936}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &670464070
 GameObject:
   m_ObjectHideFlags: 0
@@ -9096,6 +9644,7 @@ GameObject:
   - component: {fileID: 673092310}
   - component: {fileID: 673092309}
   - component: {fileID: 673092308}
+  - component: {fileID: 673092312}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -9111,7 +9660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673092306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.099995, y: 0.29999995, z: -30.85308}
+  m_LocalPosition: {x: -53.099995, y: 3, z: -30.85308}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -9143,9 +9692,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -9211,6 +9760,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673092306}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &673092312
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673092306}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &679780044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9224,6 +9789,7 @@ GameObject:
   - component: {fileID: 679780048}
   - component: {fileID: 679780047}
   - component: {fileID: 679780046}
+  - component: {fileID: 679780050}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -9239,7 +9805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679780044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.600006, y: 0.29999995, z: 55.200012}
+  m_LocalPosition: {x: 60.600006, y: 3, z: 55.200012}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -9271,9 +9837,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -9339,6 +9905,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679780044}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &679780050
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679780044}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &690863879
 GameObject:
   m_ObjectHideFlags: 0
@@ -9352,6 +9934,7 @@ GameObject:
   - component: {fileID: 690863883}
   - component: {fileID: 690863882}
   - component: {fileID: 690863881}
+  - component: {fileID: 690863885}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -9367,7 +9950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690863879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.1978, y: 0.29999995, z: -23.999992}
+  m_LocalPosition: {x: 45.1978, y: 3, z: -23.999992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -9399,9 +9982,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -9467,6 +10050,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690863879}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &690863885
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690863879}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &706732233
 GameObject:
   m_ObjectHideFlags: 0
@@ -9683,6 +10282,7 @@ GameObject:
   - component: {fileID: 709344674}
   - component: {fileID: 709344673}
   - component: {fileID: 709344672}
+  - component: {fileID: 709344676}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -9698,7 +10298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709344670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.600006, y: 0.29999995, z: 53.864304}
+  m_LocalPosition: {x: 42.600006, y: 3, z: 53.864304}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -9730,9 +10330,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -9798,6 +10398,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709344670}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &709344676
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709344670}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &712051675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9811,6 +10427,7 @@ GameObject:
   - component: {fileID: 712051679}
   - component: {fileID: 712051678}
   - component: {fileID: 712051677}
+  - component: {fileID: 712051681}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -9826,7 +10443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712051675}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70.899994, y: 0.29999995, z: -38.09326}
+  m_LocalPosition: {x: -70.899994, y: 3, z: -38.09326}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -9858,9 +10475,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -9926,6 +10543,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712051675}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &712051681
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712051675}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &716844227
 GameObject:
   m_ObjectHideFlags: 0
@@ -10034,6 +10667,7 @@ GameObject:
   - component: {fileID: 729661670}
   - component: {fileID: 729661669}
   - component: {fileID: 729661668}
+  - component: {fileID: 729661672}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -10049,7 +10683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729661666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.5, y: 0.29999995, z: -49.899994}
+  m_LocalPosition: {x: -69.5, y: 3, z: -49.899994}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -10081,9 +10715,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -10149,6 +10783,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729661666}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &729661672
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729661666}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &752149212
 GameObject:
   m_ObjectHideFlags: 0
@@ -10162,6 +10812,7 @@ GameObject:
   - component: {fileID: 752149216}
   - component: {fileID: 752149215}
   - component: {fileID: 752149214}
+  - component: {fileID: 752149218}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -10177,7 +10828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752149212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.800003, y: 0.29999995, z: 48.300003}
+  m_LocalPosition: {x: 52.800003, y: 3, z: 48.300003}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -10209,9 +10860,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -10277,6 +10928,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752149212}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &752149218
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752149212}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &757102120
 GameObject:
   m_ObjectHideFlags: 0
@@ -10290,6 +10957,7 @@ GameObject:
   - component: {fileID: 757102124}
   - component: {fileID: 757102123}
   - component: {fileID: 757102122}
+  - component: {fileID: 757102126}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -10305,7 +10973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757102120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.76123, y: 0.29999995, z: 68.610794}
+  m_LocalPosition: {x: -78.76123, y: 3, z: 68.610794}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -10337,9 +11005,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -10405,6 +11073,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757102120}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &757102126
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757102120}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &775201828
 GameObject:
   m_ObjectHideFlags: 0
@@ -10418,6 +11102,7 @@ GameObject:
   - component: {fileID: 775201832}
   - component: {fileID: 775201831}
   - component: {fileID: 775201830}
+  - component: {fileID: 775201834}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -10433,7 +11118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775201828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.824356, y: 0.29999995, z: -76.21983}
+  m_LocalPosition: {x: 67.824356, y: 3, z: -76.21983}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -10465,9 +11150,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -10533,6 +11218,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775201828}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &775201834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775201828}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &792061322
 GameObject:
   m_ObjectHideFlags: 0
@@ -11033,6 +11734,7 @@ GameObject:
   - component: {fileID: 887737859}
   - component: {fileID: 887737858}
   - component: {fileID: 887737857}
+  - component: {fileID: 887737861}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -11048,7 +11750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887737855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.900002, y: 0.29999995, z: -48.199993}
+  m_LocalPosition: {x: 29.900002, y: 3, z: -48.199993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -11080,9 +11782,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -11148,6 +11850,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887737855}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &887737861
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887737855}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &888497657
 GameObject:
   m_ObjectHideFlags: 0
@@ -11256,6 +11974,7 @@ GameObject:
   - component: {fileID: 892169820}
   - component: {fileID: 892169819}
   - component: {fileID: 892169818}
+  - component: {fileID: 892169822}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -11271,7 +11990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892169816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.599998, y: 0.29999995, z: -5.7999954}
+  m_LocalPosition: {x: -25.599998, y: 3, z: -5.7999954}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -11303,9 +12022,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -11371,6 +12090,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892169816}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &892169822
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892169816}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &906394206
 GameObject:
   m_ObjectHideFlags: 0
@@ -11384,6 +12119,7 @@ GameObject:
   - component: {fileID: 906394210}
   - component: {fileID: 906394209}
   - component: {fileID: 906394208}
+  - component: {fileID: 906394212}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -11399,7 +12135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906394206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.70741, y: 0.29999995, z: -49.882015}
+  m_LocalPosition: {x: 77.70741, y: 3, z: -49.882015}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -11431,9 +12167,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -11499,6 +12235,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906394206}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &906394212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906394206}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &935244164
 GameObject:
   m_ObjectHideFlags: 0
@@ -12134,6 +12886,7 @@ GameObject:
   - component: {fileID: 991737571}
   - component: {fileID: 991737570}
   - component: {fileID: 991737569}
+  - component: {fileID: 991737573}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -12149,7 +12902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991737567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.900002, y: 0.29999995, z: -18.406738}
+  m_LocalPosition: {x: -26.900002, y: 3, z: -18.406738}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -12181,9 +12934,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -12249,6 +13002,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991737567}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &991737573
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991737567}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &995467620
 GameObject:
   m_ObjectHideFlags: 0
@@ -12595,7 +13364,7 @@ MonoBehaviour:
   cellHeight: 25
   width: 8
   height: 8
-  AreGizmosShutDown: 0
+  AreGizmosShutDown: 1
   activatedGrid: 1
   showLogs: 1
 --- !u!4 &1023734487
@@ -12929,6 +13698,7 @@ GameObject:
   - component: {fileID: 1039858998}
   - component: {fileID: 1039858997}
   - component: {fileID: 1039858996}
+  - component: {fileID: 1039859000}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -12944,7 +13714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039858994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.538776, y: 0.29999995, z: 72.29462}
+  m_LocalPosition: {x: -41.538776, y: 3, z: 72.29462}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -12976,9 +13746,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -13044,6 +13814,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039858994}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1039859000
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858994}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1064607061
 GameObject:
   m_ObjectHideFlags: 0
@@ -13355,6 +14141,7 @@ GameObject:
   - component: {fileID: 1086462730}
   - component: {fileID: 1086462729}
   - component: {fileID: 1086462728}
+  - component: {fileID: 1086462732}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -13370,7 +14157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086462726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.9, y: 0.29999995, z: -6.393265}
+  m_LocalPosition: {x: -47.9, y: 3, z: -6.393265}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -13402,9 +14189,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -13470,6 +14257,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086462726}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1086462732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086462726}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1092797287
 GameObject:
   m_ObjectHideFlags: 0
@@ -13575,6 +14378,7 @@ GameObject:
   - component: {fileID: 1093659874}
   - component: {fileID: 1093659873}
   - component: {fileID: 1093659872}
+  - component: {fileID: 1093659876}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -13590,7 +14394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093659870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.5, y: 0.29999995, z: -58.499992}
+  m_LocalPosition: {x: -15.5, y: 3, z: -58.499992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -13622,9 +14426,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -13690,6 +14494,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093659870}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1093659876
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093659870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1098347765
 GameObject:
   m_ObjectHideFlags: 0
@@ -13811,6 +14631,7 @@ GameObject:
   - component: {fileID: 1115551968}
   - component: {fileID: 1115551967}
   - component: {fileID: 1115551966}
+  - component: {fileID: 1115551970}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -13826,7 +14647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115551964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9000015, y: 0.29999995, z: 39.5}
+  m_LocalPosition: {x: -3.9000015, y: 3, z: 39.5}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -13858,9 +14679,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -13926,6 +14747,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115551964}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1115551970
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115551964}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1118573585
 GameObject:
   m_ObjectHideFlags: 0
@@ -14142,6 +14979,7 @@ GameObject:
   - component: {fileID: 1128717107}
   - component: {fileID: 1128717106}
   - component: {fileID: 1128717105}
+  - component: {fileID: 1128717109}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -14157,7 +14995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128717103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.3, y: 0.29999995, z: -68.59999}
+  m_LocalPosition: {x: 79.3, y: 3, z: -68.59999}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -14189,9 +15027,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -14257,6 +15095,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128717103}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1128717109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128717103}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1145283445
 GameObject:
   m_ObjectHideFlags: 0
@@ -14270,6 +15124,7 @@ GameObject:
   - component: {fileID: 1145283449}
   - component: {fileID: 1145283448}
   - component: {fileID: 1145283447}
+  - component: {fileID: 1145283451}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -14285,7 +15140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145283445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.119156, y: 0.29999995, z: -59.875816}
+  m_LocalPosition: {x: 93.119156, y: 3, z: -59.875816}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -14317,9 +15172,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -14385,6 +15240,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145283445}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1145283451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145283445}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1159706125
 GameObject:
   m_ObjectHideFlags: 0
@@ -14398,6 +15269,7 @@ GameObject:
   - component: {fileID: 1159706129}
   - component: {fileID: 1159706128}
   - component: {fileID: 1159706127}
+  - component: {fileID: 1159706131}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -14413,7 +15285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159706125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.983307, y: 0.29999995, z: -66.22441}
+  m_LocalPosition: {x: 44.983307, y: 3, z: -66.22441}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -14445,9 +15317,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -14513,6 +15385,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159706125}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1159706131
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159706125}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1160987618
 GameObject:
   m_ObjectHideFlags: 0
@@ -14526,6 +15414,7 @@ GameObject:
   - component: {fileID: 1160987622}
   - component: {fileID: 1160987621}
   - component: {fileID: 1160987620}
+  - component: {fileID: 1160987624}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -14541,7 +15430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160987618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.4, y: 0.29999995, z: 34.90001}
+  m_LocalPosition: {x: -34.4, y: 3, z: 34.90001}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -14573,9 +15462,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -14641,6 +15530,70 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160987618}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1160987624
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160987618}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!1 &1181736169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181736170}
+  - component: {fileID: 1181736171}
+  m_Layer: 0
+  m_Name: BigEvadeQuery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1181736170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181736169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3518855, z: 0}
+  m_LocalScale: {x: 0.11729517, y: 0.11729517, z: 0.11729517}
+  m_Children: []
+  m_Father: {fileID: 212854900}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1181736171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181736169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13e56912cd12994d84bf893fd779f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBox: 0
+  radius: 50
+  targetGrid: {fileID: 1023734486}
+  width: 15
+  height: 30
 --- !u!1 &1184197706
 GameObject:
   m_ObjectHideFlags: 0
@@ -14749,6 +15702,7 @@ GameObject:
   - component: {fileID: 1187303135}
   - component: {fileID: 1187303134}
   - component: {fileID: 1187303133}
+  - component: {fileID: 1187303137}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -14764,7 +15718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187303131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.7, y: 0.29999995, z: -42.499992}
+  m_LocalPosition: {x: -24.7, y: 3, z: -42.499992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -14796,9 +15750,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -14864,6 +15818,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187303131}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1187303137
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187303131}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1199843434
 GameObject:
   m_ObjectHideFlags: 0
@@ -15391,6 +16361,7 @@ GameObject:
   - component: {fileID: 1250996621}
   - component: {fileID: 1250996620}
   - component: {fileID: 1250996619}
+  - component: {fileID: 1250996623}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -15406,7 +16377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250996617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.2, y: 0.29999995, z: 41.57663}
+  m_LocalPosition: {x: -64.2, y: 3, z: 41.57663}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -15438,9 +16409,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -15506,6 +16477,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250996617}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1250996623
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250996617}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1255575655
 GameObject:
   m_ObjectHideFlags: 0
@@ -15951,6 +16938,7 @@ GameObject:
   - component: {fileID: 1279607816}
   - component: {fileID: 1279607815}
   - component: {fileID: 1279607814}
+  - component: {fileID: 1279607818}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -15966,7 +16954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279607812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.6, y: 0.29999995, z: -12.493256}
+  m_LocalPosition: {x: -59.6, y: 3, z: -12.493256}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -15998,9 +16986,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -16066,6 +17054,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279607812}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1279607818
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279607812}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1290933029
 GameObject:
   m_ObjectHideFlags: 0
@@ -16079,6 +17083,7 @@ GameObject:
   - component: {fileID: 1290933033}
   - component: {fileID: 1290933032}
   - component: {fileID: 1290933031}
+  - component: {fileID: 1290933035}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -16094,7 +17099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290933029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79, y: 0.29999995, z: -42.186523}
+  m_LocalPosition: {x: -79, y: 3, z: -42.186523}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -16126,9 +17131,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -16194,6 +17199,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290933029}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1290933035
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290933029}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1294882406
 GameObject:
   m_ObjectHideFlags: 0
@@ -16423,6 +17444,7 @@ GameObject:
   - component: {fileID: 1321014355}
   - component: {fileID: 1321014354}
   - component: {fileID: 1321014353}
+  - component: {fileID: 1321014357}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -16438,7 +17460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321014351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 83.08086, y: 0.29999995, z: -29.52417}
+  m_LocalPosition: {x: 83.08086, y: 3, z: -29.52417}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -16470,9 +17492,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -16538,6 +17560,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321014351}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1321014357
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321014351}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1323225822
 GameObject:
   m_ObjectHideFlags: 0
@@ -16646,6 +17684,7 @@ GameObject:
   - component: {fileID: 1332097818}
   - component: {fileID: 1332097817}
   - component: {fileID: 1332097816}
+  - component: {fileID: 1332097820}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -16661,7 +17700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332097814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.699997, y: 0.29999995, z: -54.999996}
+  m_LocalPosition: {x: -29.699997, y: 3, z: -54.999996}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -16693,9 +17732,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -16761,6 +17800,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332097814}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1332097820
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332097814}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1338008119
 GameObject:
   m_ObjectHideFlags: 0
@@ -17072,6 +18127,7 @@ GameObject:
   - component: {fileID: 1382129381}
   - component: {fileID: 1382129380}
   - component: {fileID: 1382129379}
+  - component: {fileID: 1382129383}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -17087,7 +18143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382129377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.900002, y: 0.29999995, z: 57.13031}
+  m_LocalPosition: {x: -27.900002, y: 3, z: 57.13031}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -17119,9 +18175,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -17187,6 +18243,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382129377}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1382129383
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382129377}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1403292996
 GameObject:
   m_ObjectHideFlags: 0
@@ -17200,6 +18272,7 @@ GameObject:
   - component: {fileID: 1403293000}
   - component: {fileID: 1403292999}
   - component: {fileID: 1403292998}
+  - component: {fileID: 1403293002}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -17215,7 +18288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403292996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.10521, y: 0.29999995, z: -13.682014}
+  m_LocalPosition: {x: 47.10521, y: 3, z: -13.682014}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -17247,9 +18320,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -17315,6 +18388,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403292996}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1403293002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403292996}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1410908604
 GameObject:
   m_ObjectHideFlags: 0
@@ -17436,6 +18525,7 @@ GameObject:
   - component: {fileID: 1441753569}
   - component: {fileID: 1441753568}
   - component: {fileID: 1441753567}
+  - component: {fileID: 1441753571}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -17451,7 +18541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441753565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.2, y: 0.29999995, z: 51.600006}
+  m_LocalPosition: {x: -60.2, y: 3, z: 51.600006}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -17483,9 +18573,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -17551,6 +18641,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441753565}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1441753571
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441753565}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1452920432
 GameObject:
   m_ObjectHideFlags: 0
@@ -17875,6 +18981,7 @@ GameObject:
   - component: {fileID: 1479051128}
   - component: {fileID: 1479051127}
   - component: {fileID: 1479051126}
+  - component: {fileID: 1479051130}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -17890,7 +18997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479051124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.058884, y: 0.29999995, z: 29.364304}
+  m_LocalPosition: {x: 63.058884, y: 3, z: 29.364304}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -17922,9 +19029,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -17990,6 +19097,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479051124}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1479051130
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479051124}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1479974445
 GameObject:
   m_ObjectHideFlags: 0
@@ -18003,6 +19126,7 @@ GameObject:
   - component: {fileID: 1479974449}
   - component: {fileID: 1479974448}
   - component: {fileID: 1479974447}
+  - component: {fileID: 1479974451}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -18018,7 +19142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479974445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -81.9, y: 0.29999995, z: -13.086525}
+  m_LocalPosition: {x: -81.9, y: 3, z: -13.086525}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -18050,9 +19174,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -18118,6 +19242,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479974445}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1479974451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479974445}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1483677916
 GameObject:
   m_ObjectHideFlags: 0
@@ -18131,6 +19271,7 @@ GameObject:
   - component: {fileID: 1483677920}
   - component: {fileID: 1483677919}
   - component: {fileID: 1483677918}
+  - component: {fileID: 1483677922}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -18146,7 +19287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483677916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.570755, y: 0.29999995, z: -63.73983}
+  m_LocalPosition: {x: -72.570755, y: 3, z: -63.73983}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -18178,9 +19319,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -18246,6 +19387,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483677916}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1483677922
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483677916}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1497437202
 GameObject:
   m_ObjectHideFlags: 0
@@ -18259,6 +19416,7 @@ GameObject:
   - component: {fileID: 1497437206}
   - component: {fileID: 1497437205}
   - component: {fileID: 1497437204}
+  - component: {fileID: 1497437208}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -18274,7 +19432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497437202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.9, y: 0.29999995, z: -25.099995}
+  m_LocalPosition: {x: -60.9, y: 3, z: -25.099995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -18306,9 +19464,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -18374,6 +19532,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497437202}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1497437208
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497437202}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1498838465
 GameObject:
   m_ObjectHideFlags: 0
@@ -18685,6 +19859,7 @@ GameObject:
   - component: {fileID: 1526763511}
   - component: {fileID: 1526763510}
   - component: {fileID: 1526763509}
+  - component: {fileID: 1526763513}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -18700,7 +19875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526763507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59.699997, y: 0.29999995, z: -66.66199}
+  m_LocalPosition: {x: 59.699997, y: 3, z: -66.66199}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -18732,9 +19907,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -18800,6 +19975,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526763507}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1526763513
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526763507}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1550509386
 GameObject:
   m_ObjectHideFlags: 0
@@ -18908,6 +20099,7 @@ GameObject:
   - component: {fileID: 1572385356}
   - component: {fileID: 1572385355}
   - component: {fileID: 1572385354}
+  - component: {fileID: 1572385358}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -18923,7 +20115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572385352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.414566, y: 0.29999995, z: -16.506447}
+  m_LocalPosition: {x: 70.414566, y: 3, z: -16.506447}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -18955,9 +20147,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19023,6 +20215,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572385352}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1572385358
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572385352}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1576324087
 GameObject:
   m_ObjectHideFlags: 0
@@ -19131,6 +20339,7 @@ GameObject:
   - component: {fileID: 1591991300}
   - component: {fileID: 1591991299}
   - component: {fileID: 1591991298}
+  - component: {fileID: 1591991302}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19146,7 +20355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591991296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.699993, y: 0.29999995, z: -43.506733}
+  m_LocalPosition: {x: -38.699993, y: 3, z: -43.506733}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19178,9 +20387,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19246,6 +20455,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591991296}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1591991302
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591991296}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1594147574
 GameObject:
   m_ObjectHideFlags: 0
@@ -19259,6 +20484,7 @@ GameObject:
   - component: {fileID: 1594147578}
   - component: {fileID: 1594147577}
   - component: {fileID: 1594147576}
+  - component: {fileID: 1594147580}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19274,7 +20500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594147574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.100006, y: 0.29999995, z: 70.66431}
+  m_LocalPosition: {x: 61.100006, y: 3, z: 70.66431}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19306,9 +20532,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19374,6 +20600,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594147574}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1594147580
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594147574}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1612493176
 GameObject:
   m_ObjectHideFlags: 0
@@ -19387,6 +20629,7 @@ GameObject:
   - component: {fileID: 1612493180}
   - component: {fileID: 1612493179}
   - component: {fileID: 1612493178}
+  - component: {fileID: 1612493182}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19402,7 +20645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612493176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.40983, y: 0.29999995, z: -75.119835}
+  m_LocalPosition: {x: -44.40983, y: 3, z: -75.119835}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19434,9 +20677,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19502,6 +20745,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612493176}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1612493182
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612493176}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1615327913
 GameObject:
   m_ObjectHideFlags: 0
@@ -19515,6 +20774,7 @@ GameObject:
   - component: {fileID: 1615327917}
   - component: {fileID: 1615327916}
   - component: {fileID: 1615327915}
+  - component: {fileID: 1615327919}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19530,7 +20790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615327913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.5, y: 0.29999995, z: -51.79326}
+  m_LocalPosition: {x: -52.5, y: 3, z: -51.79326}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19562,9 +20822,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19630,6 +20890,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615327913}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1615327919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615327913}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1619948315
 GameObject:
   m_ObjectHideFlags: 0
@@ -19643,6 +20919,7 @@ GameObject:
   - component: {fileID: 1619948319}
   - component: {fileID: 1619948318}
   - component: {fileID: 1619948317}
+  - component: {fileID: 1619948321}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19658,7 +20935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619948315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.762032, y: 0.29999995, z: -30.29823}
+  m_LocalPosition: {x: -14.762032, y: 3, z: -30.29823}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19690,9 +20967,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19758,6 +21035,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619948315}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1619948321
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619948315}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1621162601
 GameObject:
   m_ObjectHideFlags: 0
@@ -19866,6 +21159,7 @@ GameObject:
   - component: {fileID: 1634273962}
   - component: {fileID: 1634273961}
   - component: {fileID: 1634273960}
+  - component: {fileID: 1634273964}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -19881,7 +21175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634273958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.80000305, y: 0.29999995, z: -65.799995}
+  m_LocalPosition: {x: -0.80000305, y: 3, z: -65.799995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -19913,9 +21207,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -19981,6 +21275,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634273958}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1634273964
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634273958}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1636654236
 GameObject:
   m_ObjectHideFlags: 0
@@ -20102,6 +21412,7 @@ GameObject:
   - component: {fileID: 1645360698}
   - component: {fileID: 1645360697}
   - component: {fileID: 1645360696}
+  - component: {fileID: 1645360700}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -20117,7 +21428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645360694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: 0.29999995, z: 41.800003}
+  m_LocalPosition: {x: -22, y: 3, z: 41.800003}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -20149,9 +21460,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -20217,6 +21528,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645360694}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1645360700
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645360694}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1649264089
 GameObject:
   m_ObjectHideFlags: 0
@@ -20230,6 +21557,7 @@ GameObject:
   - component: {fileID: 1649264093}
   - component: {fileID: 1649264092}
   - component: {fileID: 1649264091}
+  - component: {fileID: 1649264095}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -20245,7 +21573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649264089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.7, y: 0.29999995, z: 61.200012}
+  m_LocalPosition: {x: -48.7, y: 3, z: 61.200012}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -20277,9 +21605,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -20345,6 +21673,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649264089}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1649264095
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649264089}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1669288133
 GameObject:
   m_ObjectHideFlags: 0
@@ -20358,6 +21702,7 @@ GameObject:
   - component: {fileID: 1669288137}
   - component: {fileID: 1669288136}
   - component: {fileID: 1669288135}
+  - component: {fileID: 1669288139}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -20373,7 +21718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669288133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.57075, y: 0.29999995, z: -70.44656}
+  m_LocalPosition: {x: -35.57075, y: 3, z: -70.44656}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -20405,9 +21750,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -20473,6 +21818,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669288133}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1669288139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669288133}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1674985021
 GameObject:
   m_ObjectHideFlags: 0
@@ -20905,6 +22266,7 @@ GameObject:
   - component: {fileID: 1709656532}
   - component: {fileID: 1709656531}
   - component: {fileID: 1709656530}
+  - component: {fileID: 1709656534}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -20920,7 +22282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709656528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.4, y: 0.29999995, z: -14.106735}
+  m_LocalPosition: {x: -38.4, y: 3, z: -14.106735}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -20952,9 +22314,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -21020,6 +22382,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709656528}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1709656534
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709656528}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1711840117
 GameObject:
   m_ObjectHideFlags: 0
@@ -21033,6 +22411,7 @@ GameObject:
   - component: {fileID: 1711840121}
   - component: {fileID: 1711840120}
   - component: {fileID: 1711840119}
+  - component: {fileID: 1711840123}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -21048,7 +22427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711840117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88.600006, y: 0.29999995, z: -51.999992}
+  m_LocalPosition: {x: 88.600006, y: 3, z: -51.999992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -21080,9 +22459,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -21148,6 +22527,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711840117}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1711840123
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711840117}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1752421173
 GameObject:
   m_ObjectHideFlags: 0
@@ -21161,6 +22556,7 @@ GameObject:
   - component: {fileID: 1752421177}
   - component: {fileID: 1752421176}
   - component: {fileID: 1752421175}
+  - component: {fileID: 1752421179}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -21176,7 +22572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752421173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.5, y: 0.29999995, z: -73.19326}
+  m_LocalPosition: {x: -66.5, y: 3, z: -73.19326}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -21208,9 +22604,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -21276,6 +22672,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752421173}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1752421179
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752421173}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1758614562
 GameObject:
   m_ObjectHideFlags: 0
@@ -21289,6 +22701,7 @@ GameObject:
   - component: {fileID: 1758614566}
   - component: {fileID: 1758614565}
   - component: {fileID: 1758614564}
+  - component: {fileID: 1758614568}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -21304,7 +22717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758614562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.1978, y: 0.29999995, z: -40.699993}
+  m_LocalPosition: {x: 46.1978, y: 3, z: -40.699993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -21336,9 +22749,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -21404,6 +22817,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758614562}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1758614568
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758614562}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1771249555
 GameObject:
   m_ObjectHideFlags: 0
@@ -22095,6 +23524,7 @@ GameObject:
   - component: {fileID: 1834395719}
   - component: {fileID: 1834395718}
   - component: {fileID: 1834395717}
+  - component: {fileID: 1834395721}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -22110,7 +23540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834395715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.402206, y: 0.29999995, z: -57.199993}
+  m_LocalPosition: {x: 57.402206, y: 3, z: -57.199993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -22142,9 +23572,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -22210,6 +23640,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834395715}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1834395721
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834395715}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1835619802
 GameObject:
   m_ObjectHideFlags: 0
@@ -22331,6 +23777,7 @@ GameObject:
   - component: {fileID: 1844082484}
   - component: {fileID: 1844082483}
   - component: {fileID: 1844082482}
+  - component: {fileID: 1844082486}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -22346,7 +23793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844082480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.300003, y: 0.29999995, z: 48.764313}
+  m_LocalPosition: {x: 34.300003, y: 3, z: 48.764313}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -22378,9 +23825,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -22446,6 +23893,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844082480}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1844082486
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844082480}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1853703469
 GameObject:
   m_ObjectHideFlags: 0
@@ -22459,6 +23922,7 @@ GameObject:
   - component: {fileID: 1853703473}
   - component: {fileID: 1853703472}
   - component: {fileID: 1853703471}
+  - component: {fileID: 1853703475}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -22474,7 +23938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853703469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.421867, y: 0.29999995, z: 45.956726}
+  m_LocalPosition: {x: -51.421867, y: 3, z: 45.956726}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -22506,9 +23970,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -22574,6 +24038,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853703469}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1853703475
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853703469}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1860730577
 GameObject:
   m_ObjectHideFlags: 0
@@ -22682,6 +24162,7 @@ GameObject:
   - component: {fileID: 1868115642}
   - component: {fileID: 1868115641}
   - component: {fileID: 1868115640}
+  - component: {fileID: 1868115644}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -22697,7 +24178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868115638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.800003, y: 0.29999995, z: -37.699993}
+  m_LocalPosition: {x: 27.800003, y: 3, z: -37.699993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -22729,9 +24210,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -22797,6 +24278,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868115638}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1868115644
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868115638}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1883920474
 GameObject:
   m_ObjectHideFlags: 0
@@ -22810,6 +24307,7 @@ GameObject:
   - component: {fileID: 1883920478}
   - component: {fileID: 1883920477}
   - component: {fileID: 1883920476}
+  - component: {fileID: 1883920480}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -22825,7 +24323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883920474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.401337, y: 0.29999995, z: -45.23594}
+  m_LocalPosition: {x: 54.401337, y: 3, z: -45.23594}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -22857,9 +24355,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -22925,6 +24423,70 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883920474}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1883920480
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883920474}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!1 &1885525496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885525497}
+  - component: {fileID: 1885525498}
+  m_Layer: 0
+  m_Name: TargetQuery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885525497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885525496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3518855, z: 0}
+  m_LocalScale: {x: 0.11729517, y: 0.11729517, z: 0.11729517}
+  m_Children: []
+  m_Father: {fileID: 212854900}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885525498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885525496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13e56912cd12994d84bf893fd779f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBox: 0
+  radius: 40
+  targetGrid: {fileID: 1023734486}
+  width: 15
+  height: 30
 --- !u!1 &1900722854
 GameObject:
   m_ObjectHideFlags: 0
@@ -23236,6 +24798,7 @@ GameObject:
   - component: {fileID: 1922198230}
   - component: {fileID: 1922198229}
   - component: {fileID: 1922198228}
+  - component: {fileID: 1922198232}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -23251,7 +24814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922198226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.55888, y: 0.29999995, z: 28.899994}
+  m_LocalPosition: {x: 81.55888, y: 3, z: 28.899994}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -23283,9 +24846,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -23351,6 +24914,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922198226}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1922198232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922198226}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1928381215
 GameObject:
   m_ObjectHideFlags: 0
@@ -23364,6 +24943,7 @@ GameObject:
   - component: {fileID: 1928381219}
   - component: {fileID: 1928381218}
   - component: {fileID: 1928381217}
+  - component: {fileID: 1928381221}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -23379,7 +24959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928381215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.452927, y: 0.29999995, z: -14.816071}
+  m_LocalPosition: {x: -9.452927, y: 3, z: -14.816071}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -23411,9 +24991,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -23479,6 +25059,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928381215}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1928381221
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928381215}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1928714141
 GameObject:
   m_ObjectHideFlags: 0
@@ -23695,6 +25291,7 @@ GameObject:
   - component: {fileID: 1952099147}
   - component: {fileID: 1952099146}
   - component: {fileID: 1952099145}
+  - component: {fileID: 1952099149}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -23710,7 +25307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952099143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.6, y: 0.29999995, z: -31.099995}
+  m_LocalPosition: {x: -37.6, y: 3, z: -31.099995}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -23742,9 +25339,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -23810,6 +25407,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952099143}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1952099149
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952099143}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1957285203
 GameObject:
   m_ObjectHideFlags: 0
@@ -24121,6 +25734,7 @@ GameObject:
   - component: {fileID: 1968943550}
   - component: {fileID: 1968943549}
   - component: {fileID: 1968943548}
+  - component: {fileID: 1968943552}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -24136,7 +25750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968943546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.29779, y: 0.29999995, z: -15.599991}
+  m_LocalPosition: {x: 35.29779, y: 3, z: -15.599991}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -24168,9 +25782,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -24236,6 +25850,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968943546}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1968943552
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968943546}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1971386583
 GameObject:
   m_ObjectHideFlags: 0
@@ -24344,6 +25974,7 @@ GameObject:
   - component: {fileID: 1973757877}
   - component: {fileID: 1973757876}
   - component: {fileID: 1973757875}
+  - component: {fileID: 1973757879}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -24359,7 +25990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973757873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.141129, y: 0.29999995, z: 62.90001}
+  m_LocalPosition: {x: 30.141129, y: 3, z: 62.90001}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -24391,9 +26022,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -24459,6 +26090,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973757873}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1973757879
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973757873}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &1993400167
 GameObject:
   m_ObjectHideFlags: 0
@@ -24567,6 +26214,7 @@ GameObject:
   - component: {fileID: 2001378841}
   - component: {fileID: 2001378840}
   - component: {fileID: 2001378839}
+  - component: {fileID: 2001378843}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -24582,7 +26230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001378837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -56.7, y: 0.29999995, z: -41.593258}
+  m_LocalPosition: {x: -56.7, y: 3, z: -41.593258}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -24614,9 +26262,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -24682,6 +26330,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001378837}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2001378843
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001378837}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2003869852
 GameObject:
   m_ObjectHideFlags: 0
@@ -24790,6 +26454,7 @@ GameObject:
   - component: {fileID: 2007642648}
   - component: {fileID: 2007642647}
   - component: {fileID: 2007642646}
+  - component: {fileID: 2007642650}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -24805,7 +26470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007642644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.262032, y: 0.29999995, z: -40.298233}
+  m_LocalPosition: {x: -9.262032, y: 3, z: -40.298233}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -24837,9 +26502,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -24905,6 +26570,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007642644}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2007642650
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007642644}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2007932235
 GameObject:
   m_ObjectHideFlags: 0
@@ -25013,6 +26694,7 @@ GameObject:
   - component: {fileID: 2028321276}
   - component: {fileID: 2028321275}
   - component: {fileID: 2028321274}
+  - component: {fileID: 2028321278}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -25028,7 +26710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028321272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.300003, y: 0.29999995, z: 23.700005}
+  m_LocalPosition: {x: 26.300003, y: 3, z: 23.700005}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -25060,9 +26742,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -25128,6 +26810,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028321272}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2028321278
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028321272}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2031407016
 GameObject:
   m_ObjectHideFlags: 0
@@ -25249,6 +26947,7 @@ GameObject:
   - component: {fileID: 2033112602}
   - component: {fileID: 2033112601}
   - component: {fileID: 2033112600}
+  - component: {fileID: 2033112604}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -25264,7 +26963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033112598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.000004, y: 0.29999995, z: -54.199993}
+  m_LocalPosition: {x: -58.000004, y: 3, z: -54.199993}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -25296,9 +26995,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -25364,6 +27063,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033112598}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2033112604
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033112598}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2040877463
 GameObject:
   m_ObjectHideFlags: 0
@@ -25933,6 +27648,7 @@ GameObject:
   - component: {fileID: 2068894850}
   - component: {fileID: 2068894849}
   - component: {fileID: 2068894848}
+  - component: {fileID: 2068894852}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -25948,7 +27664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068894846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.300003, y: 0.29999995, z: -55.79999}
+  m_LocalPosition: {x: -6.300003, y: 3, z: -55.79999}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -25980,9 +27696,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26048,6 +27764,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068894846}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2068894852
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068894846}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2069504235
 GameObject:
   m_ObjectHideFlags: 0
@@ -26061,6 +27793,7 @@ GameObject:
   - component: {fileID: 2069504239}
   - component: {fileID: 2069504238}
   - component: {fileID: 2069504237}
+  - component: {fileID: 2069504241}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -26076,7 +27809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069504235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.67865, y: 0.29999995, z: -4.1241684}
+  m_LocalPosition: {x: 39.67865, y: 3, z: -4.1241684}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -26108,9 +27841,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26176,6 +27909,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069504235}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2069504241
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069504235}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2069535135
 GameObject:
   m_ObjectHideFlags: 0
@@ -26297,6 +28046,7 @@ GameObject:
   - component: {fileID: 2083571963}
   - component: {fileID: 2083571962}
   - component: {fileID: 2083571961}
+  - component: {fileID: 2083571965}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -26312,7 +28062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083571959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.409828, y: 0.29999995, z: -81.82658}
+  m_LocalPosition: {x: -7.409828, y: 3, z: -81.82658}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -26344,9 +28094,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26412,6 +28162,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083571959}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2083571965
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083571959}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2097633480
 GameObject:
   m_ObjectHideFlags: 0
@@ -26425,6 +28191,7 @@ GameObject:
   - component: {fileID: 2097633484}
   - component: {fileID: 2097633483}
   - component: {fileID: 2097633482}
+  - component: {fileID: 2097633486}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -26440,7 +28207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097633480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.158897, y: 0.29999995, z: 64.54109}
+  m_LocalPosition: {x: -59.158897, y: 3, z: 64.54109}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -26472,9 +28239,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26540,6 +28307,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097633480}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2097633486
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097633480}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2129455282
 GameObject:
   m_ObjectHideFlags: 0
@@ -26553,6 +28336,7 @@ GameObject:
   - component: {fileID: 2129455286}
   - component: {fileID: 2129455285}
   - component: {fileID: 2129455284}
+  - component: {fileID: 2129455288}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -26568,7 +28352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129455282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.25888, y: 0.29999995, z: 18.999992}
+  m_LocalPosition: {x: 65.25888, y: 3, z: 18.999992}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -26600,9 +28384,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26668,6 +28452,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129455282}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2129455288
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129455282}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2137926284
 GameObject:
   m_ObjectHideFlags: 0
@@ -26681,6 +28481,7 @@ GameObject:
   - component: {fileID: 2137926288}
   - component: {fileID: 2137926287}
   - component: {fileID: 2137926286}
+  - component: {fileID: 2137926290}
   m_Layer: 0
   m_Name: SuperBoid
   m_TagString: Untagged
@@ -26696,7 +28497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137926284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.838776, y: 0.29999995, z: 52.894608}
+  m_LocalPosition: {x: -14.838776, y: 3, z: 52.894608}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1023734487}
@@ -26728,9 +28529,9 @@ MonoBehaviour:
   arriveRadius: 2
   eatRadius: 1
   evadeRadius: 12
-  separationWeightValue: 2
-  alignWeightValue: 2
-  cohesionWeightValue: 2
+  separationWeightValue: 40
+  alignWeightValue: 20
+  cohesionWeightValue: 20
   mapXbounds: 100
   mapZbounds: 100
   amDead: 0
@@ -26796,6 +28597,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137926284}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2137926290
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137926284}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &2138154722
 GameObject:
   m_ObjectHideFlags: 0

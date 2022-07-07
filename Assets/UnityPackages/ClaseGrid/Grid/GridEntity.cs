@@ -117,6 +117,15 @@ public class GridEntity : MonoBehaviour
 
         ApplyForce(steering);
     }
+    
+    public void BigEvade(float multiplier)
+    {
+        Vector3 desired = fleeTarget.transform.position  - transform.position;
+        desired.Normalize();
+        desired *= maxSpeed * multiplier;
+
+        transform.position -= desired * Time.deltaTime;
+    }
 
     Vector3 Cohesion()
     {
@@ -206,17 +215,29 @@ public class GridEntity : MonoBehaviour
     
     void CheckMapBounds()
     {
-        if (transform.position.z > mapZbounds) 
+        if (transform.position.z > mapZbounds)
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y, -mapZbounds);
-        
-        if (transform.position.z < -mapZbounds) 
+            _velocity *= 5;
+        }
+
+        if (transform.position.z < -mapZbounds)
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y, mapZbounds);
-        
-        if (transform.position.x < -mapXbounds) 
+            _velocity *= 5;
+        }
+
+        if (transform.position.x < -mapXbounds)
+        {
             transform.position = new Vector3(mapXbounds, transform.position.y, transform.position.z);
-        
-        if (transform.position.x > mapXbounds) 
+            _velocity *= 5;
+        }
+
+        if (transform.position.x > mapXbounds)
+        {
             transform.position = new Vector3(-mapXbounds, transform.position.y, transform.position.z);
+            _velocity *= 5;
+        }
     }
 
     public float CheckDistance(Vector3 position)
@@ -239,6 +260,5 @@ public class GridEntity : MonoBehaviour
         amDead = true;
         _rend.material = deadMaterial;
         BoidManager.instance.RemoveBoid(this);
-        //Destroy(gameObject, 5);
     }
 }

@@ -13,7 +13,6 @@ public class BoidManager : MonoBehaviour
             instance = this;
         else
         {
-            Debug.Log("An instance of " + this + " was already present in the scene. Deleting...");
             Destroy(gameObject);
         }
     }

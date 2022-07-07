@@ -228,6 +228,14 @@ public class SpatialGrid : MonoBehaviour
         }
     }
 
+
+    public HashSet<GridEntity> GetBucket(Tuple<int, int> index)
+    {
+        if (IsInsideGrid(index))
+            return buckets[index.Item1, index.Item2];
+        
+        return default;
+    }
     #endregion
     
     
