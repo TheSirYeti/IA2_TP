@@ -203,7 +203,7 @@ public class EnemyPatrol : MonoBehaviour
             GridEntity nearestTarget = myGrid.GetHashValues().SelectMany(boid => boid).Where(boid => !boid.amDead)
                 .OrderBy(boid => GetDistance(boid.transform.position, transform.position)).FirstOrDefault();
 
-            targets = myGrid.GetHashValues().SkipWhile(boidSet => !boidSet.Contains(nearestTarget)).FirstOrDefault()
+            targets = myGrid.GetHashValues().SkipWhile(boidSet => !boidSet.Contains(nearestTarget)).First()
                 .Select(boid => boid).Where(boid => !boid.amDead).ToList();
 
             if (targets.Count <= 0)
