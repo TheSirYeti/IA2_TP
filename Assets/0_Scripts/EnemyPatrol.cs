@@ -7,6 +7,8 @@ using FSM.State;
 using FSM.StateConfigurer;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
+using System.Threading;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
@@ -16,9 +18,10 @@ public class EnemyPatrol : MonoBehaviour
     private EventFSM<EnemyStates> _fsm;
     private Rigidbody _rb;
     private Renderer _renderer;
+    public SpatialGrid myGrid;
     
     [Header("GENERAL STATS")]
-    [SerializeField] private GameObject target;
+    [SerializeField] private List<GridEntity> targets;
     [SerializeField] private LayerMask obstacleMask;
     [SerializeField] private float energy;
     private float maxEnergy;
@@ -32,18 +35,20 @@ public class EnemyPatrol : MonoBehaviour
     
     
     [Header("PATROL PROPERTIES")] 
-    [SerializeField] private List<GameObject> allWaypoits;
+    [SerializeField] private List<GameObject> allWaypoints;
     [SerializeField] private int currentWaypoint;
     [SerializeField] private float patrolSpeed;
     [SerializeField] private float minPatrolDistance;
     [SerializeField] private float energyPatrolMultiplier;
+    [SerializeField] private float patrolRange;
+    private List<GridEntity> acceptableBoids;
     private int waypointSign = 1;
-    
     
     [Header("CHASE PROPERTIES")]
     [SerializeField] private float minChaseDistance;
     [SerializeField] private float energyChaseMultiplier;
     [SerializeField] private float chaseSpeed;
+    private GridEntity currentTarget;
 
     [Header("ATTACK PROPERTIES")] 
     [SerializeField] private float minAttackDistance;
@@ -51,9 +56,14 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("REST PROPERTIES")] 
     [SerializeField] private float regenMultiplier;
+
+    [Header("GRID PROPERTIES")] 
+    [SerializeField] private float queryLenght;
     
     private void Awake()
     {
+        //IA2-P3
+        
         #region  CONFIGURATION
         
         maxEnergy = energy;
@@ -87,6 +97,7 @@ public class EnemyPatrol : MonoBehaviour
         
         StateConfigurer.Create(attack)
             .SetTransition(EnemyStates.REST, rest)
+            .SetTransition(EnemyStates.IDLE, idle)
             .Done();
 
         StateConfigurer.Create(rest)
@@ -105,14 +116,15 @@ public class EnemyPatrol : MonoBehaviour
                 return;
             }
             
-            if (Vector3.Distance(transform.position, target.transform.position) <= minChaseDistance &&
-                IsInSight(transform.position, target.transform.position))
+            /*if (Vector3.Distance(transform.position, targets.transform.position) <= minChaseDistance &&
+                IsInSight(transform.position, targets.transform.position))
             {
                 SendInputToFSM(EnemyStates.CHASE);
                 return;
             }
             
-            Debug.Log("IDLE!");
+            Debug.Log("IDLE!");*/
+            
             SendInputToFSM(EnemyStates.PATROL);
         };
 
@@ -124,30 +136,43 @@ public class EnemyPatrol : MonoBehaviour
         patrol.OnEnter += x =>
         {
             _renderer.material = patrolMat;
-            currentWaypoint = GetClosestPatrolPoint(transform.position);
+            
+            currentWaypoint = GetClosestPatrolPoint(transform, allWaypoints);
             Debug.Log("PATROL!");
         };
 
         patrol.OnUpdate += () =>
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= minChaseDistance &&
-                IsInSight(transform.position, target.transform.position))
+            //IA2-P1
+            acceptableBoids = BoidManager.instance.allBoids.Aggregate(FList.Create<GridEntity>(), (flist, boid) =>
             {
-                SendInputToFSM(EnemyStates.CHASE);
-                return;
-            }
+                flist = !boid.amDead && boid.CheckDistance(transform.position) <= patrolRange
+                    ? flist + boid
+                    : flist;
+                return flist;
+            }).OrderBy(b => b.CheckDistance(transform.position)).ToList();
 
-            Vector3 direction = allWaypoits[currentWaypoint].transform.position - transform.position;
+            foreach (var boid in acceptableBoids)
+            {
+                if (GetDistance(transform.position, boid.transform.position) <= minChaseDistance &&
+                    IsInSight(transform.position, boid.transform.position))
+                {
+                    SendInputToFSM(EnemyStates.CHASE);
+                    return;
+                }
+            }
+            
+            Vector3 direction = allWaypoints[currentWaypoint].transform.position - transform.position;
             transform.forward = direction;
 
             transform.position += transform.forward * patrolSpeed * Time.deltaTime;
 
-            if (Vector3.Distance(transform.position, allWaypoits[currentWaypoint].transform.position) <=
+            if (Vector3.Distance(transform.position, allWaypoints[currentWaypoint].transform.position) <=
                 minPatrolDistance)
             {
                 currentWaypoint += waypointSign;
 
-                if (currentWaypoint < 0 || currentWaypoint == allWaypoits.Count)
+                if (currentWaypoint < 0 || currentWaypoint == allWaypoints.Count)
                 {
                     waypointSign *= -1;
                     currentWaypoint += waypointSign;
@@ -159,7 +184,6 @@ public class EnemyPatrol : MonoBehaviour
             if (energy <= 0)
             {
                 SendInputToFSM(EnemyStates.REST);
-                return;
             }
         };
 
@@ -167,17 +191,61 @@ public class EnemyPatrol : MonoBehaviour
         
         #region CHASE SETUP
 
-        chase.OnEnter += x => { _renderer.material = chaseMat; Debug.Log("CHASE!"); };
+        chase.OnEnter += x =>
+        {
+            _renderer.material = chaseMat; 
+            
+            Debug.Log("CHASE!");
+            
+            //IA2-P1
+            //IA2-P2
+            
+            GridEntity nearestTarget = myGrid.GetHashValues().SelectMany(boid => boid).Where(boid => !boid.amDead)
+                .OrderBy(boid => GetDistance(boid.transform.position, transform.position)).FirstOrDefault();
+
+            targets = myGrid.GetHashValues().SkipWhile(boidSet => !boidSet.Contains(nearestTarget)).FirstOrDefault()
+                .Select(boid => boid).Where(boid => !boid.amDead).ToList();
+
+            if (targets.Count <= 0)
+            {
+                SendInputToFSM(EnemyStates.PATROL);
+                return;
+            }
+
+            foreach (var boid in targets)
+            {
+                boid.SetTarget();
+            }
+        };
 
         chase.OnUpdate += () =>
         {
-            Vector3 direction = target.transform.position - transform.position;
+            CheckForNulls();
+
+            if (targets.Count <= 0)
+            {
+                Debug.Log("ME VOY DE CHASE 0");
+                SendInputToFSM(EnemyStates.PATROL);
+            }
+            
+            //IA2-P1
+            currentTarget = targets.OrderBy(boid => GetDistance(boid.transform.position, transform.position))
+                .FirstOrDefault();
+
+            if (GetDistance(currentTarget.transform.position, transform.position) >= minChaseDistance + 7f)
+            {
+                Debug.Log("ME VOY DE CHASE 1");
+                SendInputToFSM(EnemyStates.PATROL);
+            }
+
+            Vector3 direction = currentTarget.transform.position - transform.position;
 
             transform.forward = direction.normalized;
             transform.position += transform.forward * chaseSpeed * Time.deltaTime;
 
-            if (Vector3.Distance(transform.position, target.transform.position) <= minAttackDistance)
+            if (GetDistance(transform.position, currentTarget.transform.position) <= minAttackDistance && !currentTarget.amDead)
             {
+                Debug.Log("ME VOY DE CHASE 2");
                 SendInputToFSM(EnemyStates.ATTACK);
                 return;
             }
@@ -186,7 +254,17 @@ public class EnemyPatrol : MonoBehaviour
             
             if (energy < 0)
             {
+                Debug.Log("ME VOY DE CHASE 3");
                 SendInputToFSM(EnemyStates.REST);
+            }
+        };
+
+        chase.OnExit += x =>
+        {
+            foreach (var boid in BoidManager.instance.allBoids)
+            {
+                if (!boid.amDead)
+                    boid.SetNormal();
             }
         };
 
@@ -198,7 +276,10 @@ public class EnemyPatrol : MonoBehaviour
         {
             _renderer.material = attackMat;
             Debug.Log("TIRITO");
-            SendInputToFSM(EnemyStates.REST);
+            currentTarget.SetDead();
+            currentTarget = null;
+
+            SendInputToFSM(EnemyStates.IDLE);
         };
 
         #endregion
@@ -242,26 +323,22 @@ public class EnemyPatrol : MonoBehaviour
         return false;
     }
 
-    public int GetClosestPatrolPoint(Vector3 point)
+    public int GetClosestPatrolPoint(Transform point, List<GameObject> waypoints)
     {
-        float minDistance = Mathf.Infinity;
-        int current = -1;
+        //IA2-P1
+        GameObject rangedWaypoints = waypoints.Select(w => w)
+            .Where(w => Vector3.Distance(w.transform.position, point.position) <= patrolRange)
+            .OrderBy(w => Vector3.Distance(w.transform.position, point.position)).FirstOrDefault();
 
-        int count = 0;
-        foreach (var waypoint in allWaypoits)
+        for (int i = 0; i < allWaypoints.Count; i++)
         {
-            float distance = Vector3.Distance(point, waypoint.transform.position);
-
-            if (distance <= minDistance)
+            if (allWaypoints[i] == rangedWaypoints)
             {
-                minDistance = distance;
-                current = count;
+                return i;
             }
-
-            count++;
         }
-
-        return current;
+        
+        return -1;
     }
     
     private void SendInputToFSM(EnemyStates state)
@@ -269,5 +346,26 @@ public class EnemyPatrol : MonoBehaviour
         _fsm.SendInput(state);
     }
 
+    public float GetDistance(Vector3 pos1, Vector3 pos2)
+    {
+        return Vector3.Distance(pos1, pos2);
+    }
 
+    public void CheckForNulls()
+    {
+        if (targets.Count <= 0)
+        {
+            return;
+        }
+
+        List<GridEntity> auxList = new List<GridEntity>(targets);
+
+        foreach (var gridEntity in auxList)
+        {
+            if (gridEntity == null)
+            {
+                targets.Remove(gridEntity);
+            }
+        }
+    }
 }
